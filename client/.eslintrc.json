@@ -1,0 +1,35 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "root": true,
+  "plugins": ["testing-library", "prettier"],
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
+  "rules": {
+    "indent": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "tabWidth": 2,
+        "semi": false,
+        "singleQuote": true,
+        "overrides": [
+          {
+            "files": "*.json",
+            "options": {
+              "parser": "json"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

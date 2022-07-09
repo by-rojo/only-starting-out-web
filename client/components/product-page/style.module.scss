@@ -1,0 +1,57 @@
+
+.buyNowPanel{
+  height: calc(100vh - 56px);
+  z-index: 1;
+  max-width: 530px;
+  margin-left: 2rem;
+}
+
+.scrollableY {
+  max-height: 215px;
+  overflow-y: auto;
+}
+
+.imageContainer {
+  h1 {
+    text-shadow: 2px 2px 2px #222 ;
+    background: linear-gradient(to bottom,rgb(50 50 50 / 60%) 0,transparent 100%)
+  }
+
+  img {
+    min-width: 500px !important;
+  }
+}
+
+.productNameMobile {
+  max-width: 530px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.triangle {
+  font-size: 6rem;
+  color: currentcolor;
+  line-height: 1;
+  animation: triangle-animation 1s ease-in-out infinite alternate;
+}
+
+
+.buyNowPanelMobile {
+  [class*=card] {
+    max-width: 535px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@keyframes triangle-animation {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-5px);
+  }
+}
