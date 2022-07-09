@@ -11,10 +11,7 @@ Website for OSO Project
 git init
 git remote add origin <repoURL>
 git pull origin main
-
-git fetch <repoURL>
-git pull <repoURL> main
 git add .
 git commit -m "initial commit"
-git push <repoURL> main
+git push -u origin main
 `
