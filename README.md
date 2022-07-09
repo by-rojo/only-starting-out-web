@@ -9,6 +9,9 @@ Website for OSO Project
 * Run commands to automatically setup repostory if url is provided
 `bash
 git init
+git remote add origin <repoURL>
+git pull origin main
+
 git fetch <repoURL>
 git pull <repoURL> main
 git add .
