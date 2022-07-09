@@ -1,10 +1,10 @@
-# iagmft-nodejs
+# Client side of Only Starting Out
 
 Node JS affiliate SPA built with NextJS and React
 
 ##
 
-Amazon Reseller shop for iaintgotmoneyforthat.com with automated import scripts using the Amazon Reselllers API and Wordpress as a headless CMS.
+Reselllers API and Wordpress as a headless CMS.
 
 
 ## Requirements
@@ -207,21 +207,3 @@ code --install-extension wk-j.webpack-progress
 code --install-extension Zignd.html-css-class-completion
 ```
 
-
-## TODO
-
-[ ] Generate application - create a npx script to dynamically generate apps
-
-[ ] Add unit tests
-
-[ ] Add premium plugins
-
-[ ] Add social media meta data and sharing - premium plugin
-
-[ ] Optimize SEO - premium plugin
-
-[ ] Add model popup with newsletter signup with 10% off - premium plugin
-
-[ ] Add comments to blog posts and product pages - preium plugin
-
-[ ] Create Landing Page for buying Plugins
