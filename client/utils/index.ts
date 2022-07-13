@@ -1,5 +1,4 @@
 import he from 'he'
-const HOST_URL = process.env.NEXT_PUBLIC_HOST_URL
 
 export const cleanHtmlString = (text?: string, lineBreaks?: boolean) => {
   if (!text) return
@@ -15,10 +14,6 @@ export const cleanHtmlString = (text?: string, lineBreaks?: boolean) => {
 
   replacedText = replacedText.replace(/<[^>]*>/g, '')
   return he.decode(replacedText)
-}
-
-export const permalinkToRelativePath = (path: string): string => {
-  return path.replace(HOST_URL || '', '')
 }
 
 export const removeUndefinedDataFromPageProps = <
