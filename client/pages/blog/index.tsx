@@ -19,7 +19,7 @@ const BlogPage: NextPage<BlogsPageStaticData> = ({ menu }) => {
     <StaticPageContext data={{ menu }}>
       <>
         <AppHead
-          title={`Blog – ${process.env.NEXT_PUBLIC_SITE_NAME}`}
+          title={`Articles – ${process.env.NEXT_PUBLIC_SITE_NAME}`}
           description={process.env.NEXT_PUBLIC_BLOG_PAGE_DESCRIPTION}
         />
         <NavBar />

@@ -1,10 +1,9 @@
 		"use strict";
 		var makali_brandnumber = 6,
-			makali_brandscrollnumber = 1,
+			makali_brandscrollnumber = 2,
 			makali_brandpause = 3000,
-			makali_brandanimate = 2000;
+			makali_brandanimate = 700;
 		var makali_brandscroll = false;
-							makali_brandscroll = true;
 					var makali_categoriesnumber = 6,
 			makali_categoriesscrollnumber = 2,
 			makali_categoriespause = 3000,
@@ -14,9 +13,8 @@
 			makali_bloganimate = 700;
 		var makali_blogscroll = false;
 					var makali_testipause = 3000,
-			makali_testianimate = 2000;
+			makali_testianimate = 700;
 		var makali_testiscroll = false;
-							makali_testiscroll = false;
 					var makali_catenumber = 6,
 			makali_catescrollnumber = 2,
 			makali_catepause = 3000,
@@ -25,7 +23,6 @@
 					var makali_menu_number = 9;
 		var makali_show_catmenu_home = 0;
 		var makali_sticky_header = false;
-							makali_sticky_header = true;
 					jQuery(document).ready(function(){
 			jQuery(".ws").on('focus', function(){
 				if(jQuery(this).val()==""){

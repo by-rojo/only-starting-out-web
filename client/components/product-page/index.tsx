@@ -5,7 +5,7 @@ import { DEFAULT_BLUR_URL } from '../../constants'
 import style from './style.module.scss'
 import classNames from 'classnames'
 import Link from 'next/link'
-import RecentlyAddedSection from '../home-page/components/recently-added-section'
+import RecentlyAddedSection from '../home-page-example/components/recently-added-section'
 import Breadcrumbs from '../breadcrumbs'
 import Breadcrumb from '../breadcrumbs/breadcrumb'
 

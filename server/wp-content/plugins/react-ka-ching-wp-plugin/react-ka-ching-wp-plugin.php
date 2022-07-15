@@ -36,6 +36,7 @@ if (!class_exists('reactkachingwpplugin')) {
                     ]
                 );
             });
+            add_action('init', [$this, 'register_post_types']);
         }
 
         function wpdb()
@@ -333,6 +334,61 @@ if (!class_exists('reactkachingwpplugin')) {
                 wp_send_json("Current user is unable to make this request", 500);
             }
             wp_die();
+        }
+
+        // Our custom post type function
+        function register_post_types()
+        {
+            // Adds developer 
+            register_post_type(
+                'Engineering',
+                array(
+                    'labels' => array(
+                        'name' => __('Engineering'),
+                        'singular_name' => __('Engineers'),
+
+                    ),
+                    'public' => true,
+                    'has_archive' => true,
+                    'rewrite' => array('slug' => 'engineering'),
+                    'show_in_rest' => true,
+                    'show_ui'             => true,
+                    'show_in_menu'        => 'react-ka-ching-wp-plugin',
+                    'show_in_nav_menus'   => true,
+                    'capability_type'     => 'post',
+                    'can_export'          => true,
+                    'has_archive'         => true,
+                    'publicly_queryable'  => true,
+
+                    'taxonomies' => 'category',
+
+                    'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',   'post-attributes'),
+                )
+            );
+
+            // Adds business types 
+            register_post_type(
+                'Businesses',
+                array(
+                    'labels' => array(
+                        'name' => __('Businesses'),
+                        'singular_name' => __('Business'),
+                    ),
+                    'public' => true,
+                    'has_archive' => true,
+                    'rewrite' => array('slug' => 'businesses'),
+                    'show_in_rest' => true,
+                    'show_ui'             => true,
+                    'show_in_menu'        => 'react-ka-ching-wp-plugin',
+                    'show_in_nav_menus'   => true,
+                    'capability_type'     => 'post',
+                    'can_export'          => true,
+                    'has_archive'         => true,
+                    'publicly_queryable'  => true,
+                    'taxonomies' => 'category',
+                    'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',   'post-attributes'),
+                )
+            );
         }
     }
 
