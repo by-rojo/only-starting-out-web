@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { DEFAULT_BLUR_URL } from '../../constants'
-import HeroLayout from '../hero-layout'
+import HeroLayout from './layout'
 
 const Hero: React.FC<HeroPropsWithChildren> = ({ children, image }) => {
   return (

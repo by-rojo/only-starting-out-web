@@ -1,7 +1,7 @@
 import cNames from 'classnames'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { COMPANY_NAME, NAV_BREAKPOINT } from '../../constants'
+import { SITE_NAME, NAV_BREAKPOINT } from '../../constants'
 import useStaticHomePageData from '../home-page/hooks'
 import styles from './style.module.scss'
 
@@ -28,13 +28,13 @@ const NavBar: React.FC = () => {
   return (
     <nav
       className={cNames(
-        'navbar sticky-top navbar-light bg-light navbar-expand-lg',
+        'navbar sticky-top navbar-light navbar-expand-lg',
         styles.navBar
       )}
     >
-      <div className="container-fluid">
+      <div className="container">
         <Link passHref href="/">
-          <a className="navbar-brand">{COMPANY_NAME}</a>
+          <a className="navbar-brand">{SITE_NAME}</a>
         </Link>
         <button
           onClick={() => setToggled(!toggled)}
@@ -51,20 +51,22 @@ const NavBar: React.FC = () => {
             show: toggled,
           })}
         >
-          <div className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
             {menu?.data?.map((menuItem) => {
               const isDropdown = menuItem?.child_items?.length > 0
               return (
                 <div
-                  className={cNames('nav-item', 'dropdown')}
+                  className={cNames('nav-item', 'dropdown', 'me-4')}
                   key={menuItem.ID}
                 >
                   <>
                     <Link href={menuItem.url} passHref>
                       <a
                         {...getDropdownProps(menuItem.ID)}
-                        className={cNames('nav-link', {
+                        className={cNames('nav-link', 'fw-bold', {
                           'dropdown-toggle': isDropdown,
+                          'btn btn-primary text-white':
+                            menuItem.title === 'Get Started',
                         })}
                         role="button"
                         aria-expanded="false"

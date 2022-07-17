@@ -1,0 +1,20 @@
+.cursor {
+  animation: blinker 1s linear alternate infinite;
+  font-weight: bold;
+}
+
+@keyframes blinker {
+  24% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+}
