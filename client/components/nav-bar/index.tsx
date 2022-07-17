@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
   return (
     <nav
       className={cNames(
-        'navbar sticky-top navbar-light navbar-expand-lg',
+        'navbar sticky-top navbar-dark navbar-expand-lg',
         styles.navBar
       )}
     >
