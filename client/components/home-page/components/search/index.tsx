@@ -1,6 +1,5 @@
 import classNames from 'classnames'
 import { FormEvent } from 'react'
-import styles from './styles.module.scss'
 
 const Search: React.FC = () => {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -10,12 +9,12 @@ const Search: React.FC = () => {
       search: fdata.get('search'),
     }
     console.log('search')
+    //todo do search
   }
   return (
     <div
       className={classNames(
-        styles.search,
-        'container p-3 bg-primary text-white'
+        'position-relative mt-n5 rounded container p-3 bg-primary'
       )}
     >
       <form onSubmit={onSubmit} className="d-flex">
@@ -25,13 +24,15 @@ const Search: React.FC = () => {
             autoFocus
             className="form-control form-control-lg"
             aria-describedby="Serch to get started"
-            placeholder={`Try "Marketing", "Web Developer", or "React JS`}
+            placeholder={`Try "Marketing", "Web Developer", or "React JS"`}
             required
             name="search"
             min={3}
           />
         </div>
-        <button className="btn btn-lg btn-success ms-3">Get Started</button>
+        <button className="btn btn-lg btn-success ms-3 text-white">
+          Get Started
+        </button>
       </form>
     </div>
   )

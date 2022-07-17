@@ -207,3 +207,6 @@ code --install-extension wk-j.webpack-progress
 code --install-extension Zignd.html-css-class-completion
 ```
 
+
+## TODO
+[] Add search endpoint to homepage

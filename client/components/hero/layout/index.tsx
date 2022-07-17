@@ -12,7 +12,7 @@ const HeroLayout: React.FC<HeroLayoutProps> = ({
   children,
 }) => {
   return (
-    <div className="col-md-5 p-lg-5 mx-auto my-5 position-relative text-white">
+    <div className="col-md-5 p-lg-5 mx-auto my-5 position-relative text-white text-center">
       {headline && <Headline>{headline}</Headline>}
       {subHeadline && <SubHeadline>{subHeadline}</SubHeadline>}
       {linkText && <Button href={href || '#'}>{linkText}</Button>}

@@ -1,0 +1,10 @@
+.gradient::after {
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+  content: " ";
+  background: linear-gradient(to bottom, rgba(11, 51, 91, 0.73),  rgba(11, 51, 91, 0.73));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
