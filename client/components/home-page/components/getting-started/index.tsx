@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import StepCard from '../step-card'
 
 const GettingStarted: React.FC = () => {
@@ -22,6 +23,11 @@ const GettingStarted: React.FC = () => {
           header="Book a meeting"
           subHeader="Meet with talented partners, and only pay for the time needed."
         />
+      </div>
+      <div className="d-flex justify-content-center align-items-center mb-5 pt-3">
+        <Link passHref href="/get-started">
+          <a className="btn btn-lg btn-primary">Get Started</a>
+        </Link>
       </div>
     </div>
   )
