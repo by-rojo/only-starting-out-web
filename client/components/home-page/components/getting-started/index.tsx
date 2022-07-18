@@ -3,10 +3,10 @@ import StepCard from '../step-card'
 
 const GettingStarted: React.FC = () => {
   return (
-    <div className="container mt-5 pt-3">
-      <h1 className="text-center fw-light">
+    <div className="container mt-5 pt-2">
+      <h2 className="text-center fw-light h1">
         Getting started is easier than you think
-      </h1>
+      </h2>
       <div className="d-flex flex-wrap mx-5 mt-5">
         <StepCard
           number={1}
