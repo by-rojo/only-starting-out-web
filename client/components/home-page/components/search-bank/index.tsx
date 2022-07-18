@@ -13,7 +13,7 @@ const SearchBank: React.FC = () => {
       {SEARCH_BANK_DEFAULT_LINKS.map((link) => {
         return (
           <Link passHref href={link.href} key={link.text}>
-            <a className="btn btn-outline-primary me-3">{link.text}</a>
+            <a className="btn btn-outline-primary me-3 mt-3">{link.text}</a>
           </Link>
         )
       })}

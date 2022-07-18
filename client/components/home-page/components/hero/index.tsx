@@ -27,9 +27,9 @@ const HomePageHero: React.FC = () => {
           </span>
         </HeroHeadline>
         <HeroSubHeadline>
-          Start building projects with fresh talent by your side. Grow your
-          business, resume, and porfolio and take the next steps in your career.
-          All on your terms.
+          Start a venture with fresh talent by your side. Grow your business,
+          resume, porfolio and take the next steps in your career. All on your
+          terms.
         </HeroSubHeadline>
       </HeroLayout>
       <Search />

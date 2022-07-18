@@ -14,10 +14,13 @@ const Search: React.FC = () => {
   return (
     <div
       className={classNames(
-        'position-relative mt-n5 rounded container p-3 bg-primary'
+        'position-relative rounded container p-3 bg-primary'
       )}
     >
-      <form onSubmit={onSubmit} className="d-flex">
+      <form
+        onSubmit={onSubmit}
+        className="d-flex flex-wrap flex-column flex-sm-row"
+      >
         <div className="form-group flex-grow-1">
           <input
             type="search"
@@ -30,7 +33,7 @@ const Search: React.FC = () => {
             min={3}
           />
         </div>
-        <button className="btn btn-lg btn-success ms-3 text-white">
+        <button className="btn btn-lg btn-success ms-0 ms-sm-3 mt-3 mt-sm-0 text-white text-nowrap">
           Get Started
         </button>
       </form>
