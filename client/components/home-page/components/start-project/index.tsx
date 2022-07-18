@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const StartProject: React.FC = () => {
   return (
     <div className="bg-danger p-5">
@@ -10,9 +12,9 @@ const StartProject: React.FC = () => {
             Our talent pool has been vetted and ready to do their best work.
           </span>
         </p>
-        <button className="btn btn-lg btn-outline-warning mt-4">
-          Apply today
-        </button>
+        <Link passHref href="/login">
+          <a className="btn btn-lg btn-outline-warning mt-4">Apply today</a>
+        </Link>
       </div>
     </div>
   )
