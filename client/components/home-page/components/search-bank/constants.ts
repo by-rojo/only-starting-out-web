@@ -20,8 +20,8 @@ export const SEARCH_BANK_DEFAULT_LINKS = [
     text: 'Graphic Design',
   },
   {
-    href: '/search/startup',
-    text: 'Startup',
+    href: '/search/startups',
+    text: 'Startups',
   },
   {
     href: '/search/ui-development',

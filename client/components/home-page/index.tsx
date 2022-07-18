@@ -2,6 +2,7 @@ import GettingStarted from './components/getting-started'
 import HomePageHero from './components/hero'
 import FindTalent from './components/find-talent'
 import GetIt from './components/get-it'
+import StartProject from './components/start-project'
 
 const HomePage: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage: React.FC = () => {
       <GettingStarted />
       <GetIt />
       <FindTalent />
+      <StartProject />
     </>
   )
 }
