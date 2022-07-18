@@ -8,8 +8,8 @@ export const SEARCH_BANK_DEFAULT_LINKS = [
     text: 'Python',
   },
   {
-    href: '/search/web-developer',
-    text: 'Web Developer',
+    href: '/search/web-development',
+    text: 'Web Development',
   },
   {
     href: '/search/marketing',
@@ -24,15 +24,15 @@ export const SEARCH_BANK_DEFAULT_LINKS = [
     text: 'Startup',
   },
   {
-    href: '/search/ui-developer',
-    text: 'UI Developer',
+    href: '/search/ui-development',
+    text: 'UI Development',
   },
   {
     href: '/search/machine-learning',
     text: 'Machine Learning',
   },
   {
-    href: '/search/react-developer',
-    text: 'React Developer',
+    href: '/search/react-development',
+    text: 'React Development',
   },
 ]

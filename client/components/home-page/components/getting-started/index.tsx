@@ -24,7 +24,7 @@ const GettingStarted: React.FC = () => {
           subHeader="Meet with talented partners, and only pay for the time needed."
         />
       </div>
-      <div className="d-flex justify-content-center align-items-center mb-5 pt-3">
+      <div className="d-flex justify-content-center align-items-center mb-5 pt-3 pb-3">
         <Link passHref href="/get-started">
           <a className="btn btn-lg btn-primary">Get Started</a>
         </Link>

@@ -6,7 +6,6 @@ import styles from './styles.module.scss'
 const FindTalent: React.FC = () => {
   return (
     <div className="container my-5">
-      <hr />
       <h2 className="text-center fw-light h1 my-5">
         Find ventures started by industry veterans
       </h2>
