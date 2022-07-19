@@ -22,6 +22,7 @@ const Sidebar = () => {
             src={images?.[0].src ?? DEFAULT_BLUR_URL}
             width={300}
             height={300}
+            objectFit="scale-down"
             quality={100}
             placeholder="blur"
             blurDataURL={DEFAULT_BLUR_URL}
