@@ -2,7 +2,7 @@ import { KPIS } from './constants'
 
 const TrustSection: React.FC = () => {
   return (
-    <div className="bg-dark text-light text-center py-5">
+    <div className="bg-dark text-light text-center py-5 ">
       <div className="container">
         <h2 className="h1 fw-light mb-3 mt-5">
           Trusted by people from all around the world
