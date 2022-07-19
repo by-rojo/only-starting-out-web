@@ -9,7 +9,9 @@ const SearchBank: React.FC = () => {
         'position-relative mt-4 rounded container p-3 bg-white'
       )}
     >
-      <h5 className="mb-3">Popular Searches</h5>
+      <h5 className="mb-2 mb-md-0 text-uppercase fw-bold fs-6 text-dark">
+        Popular Searches
+      </h5>
       {SEARCH_BANK_DEFAULT_LINKS.map((link) => {
         return (
           <Link passHref href={link.href} key={link.text}>

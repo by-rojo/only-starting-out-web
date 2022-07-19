@@ -4,10 +4,15 @@ import { DEFAULT_BLUR_URL } from '../../constants'
 import HeroLayout from './layout'
 import styles from './styles.module.scss'
 
-const Hero: React.FC<HeroPropsWithChildren> = ({ children, image }) => {
+const Hero: React.FC<HeroPropsWithChildren> = ({
+  children,
+  image,
+  className,
+}) => {
   return (
     <section
       className={classNames(
+        className,
         'bg-dark position-relative overflow-hidden p-3 p-md-5 bg-light'
       )}
     >
