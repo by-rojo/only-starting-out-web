@@ -7,7 +7,7 @@ import styles from './style.module.scss'
 
 const BlogContainer: React.FC = () => {
   const blog = useBlog()
-  const image = blog?.media?.[0]
+  const image = blog?.media?.[1]
   return (
     <div className={styles.blogContainer}>
       <AppHead
