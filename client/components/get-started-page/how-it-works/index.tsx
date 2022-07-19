@@ -41,14 +41,14 @@ const HowItWorks: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="d-flex justify-content-center flex-wrap mt-4">
+      <div className="d-flex justify-content-center flex-wrap mt-5 mb-5 pb-2">
         <Link href="/register" passHref>
           <a className="btn btn-dark col-12 col-lg-3 col-md-4">
             Join our program
           </a>
         </Link>
         <Link href="/faq" passHref>
-          <a className="btn btn-info col-12 col-lg-3 ms-md-3 mt-3 mt-sm-auto col-md-4">
+          <a className="btn btn-info col-12 col-lg-3 ms-md-3 mt-3 mt-md-auto col-md-4">
             Frequently asked questions
           </a>
         </Link>
