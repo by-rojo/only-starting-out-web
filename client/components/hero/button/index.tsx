@@ -7,7 +7,7 @@ const HeroButton: React.FC<PropsWithChildren<LinkProps>> = ({
 }) => {
   return (
     <Link passHref {...props}>
-      <a className="btn btn-outline-light">{children}</a>
+      <a className="btn btn-outline-light btn-lg">{children}</a>
     </Link>
   )
 }
