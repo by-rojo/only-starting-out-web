@@ -19,17 +19,12 @@ const ProductsList: React.FC = () => {
   const { category } = useStaticCategoryPageData()
 
   return dispatch && pageStart ? (
-    <section className="mt-4">
+    <section className="mt-4 mb-5">
       <div className="container">
         <Breadcrumbs>
           <Breadcrumb text="Home" href="/" />
-          <Breadcrumb
-            text={category?.name || ''}
-            active
-            href={category?.slug || ''}
-          />
+          <Breadcrumb text="Shop" href="/shop" active />
         </Breadcrumbs>
-        <h2 className="mb-5 pt-3 mb-0">{category?.name} Category</h2>
         <hr className="mb-4" />
       </div>
 

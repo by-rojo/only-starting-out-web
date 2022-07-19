@@ -13,7 +13,7 @@ const FancyCategoryGrid: React.FC = () => {
         {productCategories?.map(({ name, id, image, slug }, i) => {
           return (
             <div key={id} className="col-12 col-sm-6 col-md-3 mb-4">
-              <Link passHref href={`/product-category/${slug}`}>
+              <Link passHref href={`/shop/${slug}`}>
                 <a
                   onClick={() => {
                     window.gtag('event', 'category_hero_menu', {

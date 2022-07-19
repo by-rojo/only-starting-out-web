@@ -63,7 +63,7 @@ const ProductPage: React.FC = () => {
   )
   return (
     <>
-      <div className="container my-5 d-lg-flex justify-content-between">
+      <div className="container my-5 pt-5 d-lg-flex justify-content-between">
         <div>
           <h1
             className={classNames(
@@ -133,7 +133,7 @@ const ProductPage: React.FC = () => {
           <Breadcrumb text="Home" href="/" />
           <Breadcrumb
             text={product?.categories?.[0]?.name || ''}
-            href={`/product-category/${product?.categories?.[0]?.slug}`}
+            href={`/shop/${product?.categories?.[0]?.slug}`}
           />
           <Breadcrumb
             active
@@ -151,14 +151,15 @@ const ProductPage: React.FC = () => {
         include={product?.related_ids}
         orderBy="popularity"
       />
-
-      <RecentlyAddedSection
-        pageStart={0}
-        sectionTitle={`Popular in ${product?.categories?.[0].name}`}
-        category={product?.categories?.[0].id}
-        exclude={[product?.id || 0]}
-        orderBy="popularity"
-      />
+      <div className="mb-5">
+        <RecentlyAddedSection
+          pageStart={0}
+          sectionTitle={`Popular in ${product?.categories?.[0].name}`}
+          category={product?.categories?.[0].id}
+          exclude={[product?.id || 0]}
+          orderBy="popularity"
+        />
+      </div>
     </>
   )
 }

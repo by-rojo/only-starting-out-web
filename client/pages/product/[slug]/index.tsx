@@ -13,7 +13,7 @@ const ProductPage: NextPage<ProductPageStaticData> = ({ menu, product }) => {
     <StaticPageContext data={{ menu, product }}>
       <>
         <AppHead title={`${product.name}`} description={product.description} />
-        <NavBar />
+        <NavBar forceInView />
         <Page />
         <Footer />
       </>
