@@ -1,17 +1,15 @@
 import type { NextPage } from 'next'
 import wpMenues from '../../api-factory/wp/menus'
 import wpProducts from '../../api-factory/wp/products'
-import wpProductsCategories from '../../api-factory/wp/products/categories'
 import Footer from '../../components/footer'
 import Page from '../../components/category-page'
 import NavBar from '../../components/nav-bar'
-import {
-  DEFAULT_PRODUCT_CATEGORY_PARAMS,
-  DEFAULT_RECENT_PRODUCTS_PARAMS,
-} from '../../constants'
+import { DEFAULT_RECENT_PRODUCTS_PARAMS } from '../../constants'
 import { StaticPageContext } from '../../context/static-page-context'
 import AppHead from '../../components/app-head'
 import { dehydrate, QueryClient } from 'react-query'
+
+//todo this needs to be like the old home page with sections split out
 
 const ProductCategoryPage: NextPage<CategoryPageStaticData> = ({
   menu,
