@@ -1,6 +1,7 @@
 @import "../../styles/module-utils";
 /* stylelint-disable no-duplicate-selectors, kebab-case, keyframes-name-pattern */
 .rangeSlider {
+  padding: 10px;
   :global {
     .rc-slider {
       position: relative;

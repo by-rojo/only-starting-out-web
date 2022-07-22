@@ -30,6 +30,7 @@ $yellow:  #fce9da !default;
 $green:   #05a081 !default;
 $teal:    #4a92a8 !default;
 $cyan:    #60ccd9 !default;
+$gray:          #bcb6c7;
 $colors: (
   "blue":       $blue,
   "indigo":     $indigo,
@@ -42,9 +43,10 @@ $colors: (
   "teal":       $teal,
   "cyan":       $cyan,
   "white":      $white,
-  "gray":       #bcb6c7,
+  "gray":       $gray,
   "gray-dark":  #4f4c55
 ) !default;
+$gray:          #bcb6c7;
 $primary:       $blue !default;
 $secondary:     #c7839c !default;
 $success:       $green !default;
