@@ -2,8 +2,8 @@ const MAX_EXPERIENCE_POINTS = 1000
 const MIN_EXPERIENCE_POINTS = 50
 const MIN_JOB_PRICE = 100
 const MAX_JOB_PRICE = 5000
-const MIN_PROJECT_DAYS = 1
-const MAX_PROJECT_DAYS = 200
+const MIN_PROPOSALS = 0
+const MAX_PROPOSALS = 100
 import { FILTER_MENU_INPUT_TYPES } from './types'
 
 export const FILTER_MENU = [
@@ -15,15 +15,17 @@ export const FILTER_MENU = [
     max: MAX_EXPERIENCE_POINTS,
     step: 10,
     defaultValue: [MIN_EXPERIENCE_POINTS, MAX_EXPERIENCE_POINTS],
+    suffix: 'xp',
   },
   {
     title: 'Number of Proposals',
-    type: FILTER_MENU_INPUT_TYPES.NUMBER,
+    type: FILTER_MENU_INPUT_TYPES.RANGE,
     name: 'proposalCount',
-    min: 0,
-    max: 100,
+    min: MIN_PROPOSALS,
+    max: MAX_PROPOSALS,
     step: 1,
-    defaultValue: [MIN_EXPERIENCE_POINTS, MAX_EXPERIENCE_POINTS],
+    suffix: 'proposals',
+    defaultValue: MAX_PROPOSALS,
   },
   {
     title: 'Category',
@@ -37,6 +39,7 @@ export const FILTER_MENU = [
     min: MIN_JOB_PRICE,
     max: MAX_JOB_PRICE,
     step: 100,
-    defaultVaue: [MIN_JOB_PRICE, MAX_JOB_PRICE],
+    defaultValue: [MIN_JOB_PRICE, MAX_JOB_PRICE],
+    unit: '$',
   },
 ]

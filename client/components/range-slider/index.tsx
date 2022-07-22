@@ -1,14 +1,47 @@
 import Slider, { SliderProps } from 'rc-slider'
+import { useState } from 'react'
 import style from './style.module.scss'
 
-//TODO: figure out a way to use this with fdata / stateless unctonrolled inputs
-const RangeSlider: React.FC<SliderProps & { name?: string }> = ({
-  name,
-  ...props
-}) => {
+const RangeSlider: React.FC<
+  SliderProps & { name?: string; unit?: '$' | string; suffix?: string }
+> = ({ name, unit, suffix, ...props }) => {
+  const [values, setValues] = useState(props.value || props.defaultValue)
+  const isArrayValue = typeof values === 'object'
+
+  const renderedValues = isArrayValue ? (
+    <>
+      {unit}
+      {values[0] || props.min} – {values[1] || props.max}
+      &nbsp;{suffix}
+    </>
+  ) : (
+    <>
+      {unit}
+      {values || 0}
+      &nbsp;{suffix}
+    </>
+  )
   return (
-    <div className={style.rangeSlider}>
-      <Slider {...props} />
+    <div>
+      <div className="fw-bold small text-dark opacity-75">{renderedValues}</div>
+      <div className={style.rangeSlider}>
+        <Slider
+          allowCross={false}
+          range={isArrayValue}
+          onChange={(value) => {
+            setValues(value)
+          }}
+          {...props}
+        />
+        <input
+          type="hidden"
+          name={name + 'Min'}
+          value={(typeof values === 'object' ? values[0] : values) || 0}
+        />
+        {typeof values === 'object' && (
+          <input type="hidden" name={name + 'Max'} value={values[1] || 0} />
+        )}
+      </div>
     </div>
   )
 }

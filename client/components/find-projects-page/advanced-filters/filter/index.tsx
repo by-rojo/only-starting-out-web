@@ -17,6 +17,8 @@ const Filter: React.FC<AdvancedFiltersFilterProps> = ({
   defaultValue,
   options,
   index,
+  suffix,
+  unit,
 }) => {
   return (
     <>
@@ -62,7 +64,8 @@ const Filter: React.FC<AdvancedFiltersFilterProps> = ({
                       max={max}
                       name={name}
                       step={step}
-                      value={defaultValue as number | number[]}
+                      suffix={suffix}
+                      unit={unit}
                     />
                   )}
                 </div>

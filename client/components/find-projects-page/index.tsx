@@ -12,7 +12,7 @@ const FindProjectsPage: React.FC = () => {
   return (
     <div>
       <FindProjectsHero />
-      <div className="d-flex">
+      <div className="d-flex mb-n3">
         <div className="d-none d-md-block col-md-4">
           <AdvancedFilters />
         </div>

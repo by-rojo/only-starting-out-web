@@ -8,6 +8,8 @@ export interface AdvancedFiltersFilterProps {
   max?: number
   step?: number
   index: number
+  suffix?: 'xp' | string
+  unit?: '$' | string
   defaultValue?: number[] | string | number
   options?: {
     value: string
