@@ -29,7 +29,7 @@ const AccordionItem: React.FC<PropsWithChildren<AccordionItem>> = (props) => {
 
   return (
     <div
-      style={{ height }}
+      style={{ minHeight: height }}
       className={classNames('accordion-item', styles.transition)}
     >
       <div

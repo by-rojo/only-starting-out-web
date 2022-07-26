@@ -4,7 +4,9 @@ import AccordionHeader from '../../../accordion/accordion-header'
 import AccordionItem from '../../../accordion/accordion-item'
 import { AccordionProvider } from '../../../accordion/context'
 import RangeSlider from '../../../range-slider'
+import Select from '../../../select'
 import { FILTER_MENU_INPUT_TYPES } from '../types'
+import { MOCK_CATEGORY_DATA } from './constants'
 import { AdvancedFiltersFilterProps } from './types'
 
 const Filter: React.FC<AdvancedFiltersFilterProps> = ({
@@ -20,6 +22,7 @@ const Filter: React.FC<AdvancedFiltersFilterProps> = ({
   suffix,
   unit,
 }) => {
+  console.log(options || MOCK_CATEGORY_DATA)
   return (
     <>
       <div className="px-3">
@@ -31,7 +34,7 @@ const Filter: React.FC<AdvancedFiltersFilterProps> = ({
 
             <AccordionItem index={index}>
               <AccordionBody>
-                <div className="pb-2">
+                <div className="mb-2">
                   {(type === FILTER_MENU_INPUT_TYPES.TEXT ||
                     type === FILTER_MENU_INPUT_TYPES.NUMBER) && (
                     <input
@@ -44,9 +47,8 @@ const Filter: React.FC<AdvancedFiltersFilterProps> = ({
                     />
                   )}
                   {type === FILTER_MENU_INPUT_TYPES.SELECT && (
-                    <select name={name}>
-                      <option value="">Select an option</option>
-                      {options?.map((option) => (
+                    <Select name={name} defaultOptionLabel="Select an option">
+                      {(options || MOCK_CATEGORY_DATA)?.map((option) => (
                         <option
                           key={option.value}
                           selected={defaultValue === option.value}
@@ -55,7 +57,7 @@ const Filter: React.FC<AdvancedFiltersFilterProps> = ({
                           {option.text}
                         </option>
                       ))}
-                    </select>
+                    </Select>
                   )}
                   {type === FILTER_MENU_INPUT_TYPES.RANGE && (
                     <RangeSlider
