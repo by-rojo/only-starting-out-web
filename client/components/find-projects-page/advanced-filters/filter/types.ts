@@ -14,5 +14,6 @@ export interface AdvancedFiltersFilterProps {
   options?: {
     value: string
     text: string
+    selected?: boolean
   }[]
 }

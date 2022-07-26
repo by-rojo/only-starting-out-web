@@ -50,7 +50,7 @@ const Filter: React.FC<AdvancedFiltersFilterProps> = ({
                       {(options || MOCK_CATEGORY_DATA)?.map((option) => (
                         <option
                           key={option.value}
-                          selected={defaultValue === option.value}
+                          selected={option.selected}
                           value={option.value}
                         >
                           {option.text}

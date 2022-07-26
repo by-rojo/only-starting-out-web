@@ -40,5 +40,3 @@ export const PROJECT_DATA = [
     description: 'Test description',
   },
 ]
-
-export const LIST_CONTAINER_CLASSES = 'my-3 mx-2 mx-sm-5'
