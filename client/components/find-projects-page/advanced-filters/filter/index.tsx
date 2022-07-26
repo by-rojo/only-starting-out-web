@@ -22,7 +22,6 @@ const Filter: React.FC<AdvancedFiltersFilterProps> = ({
   suffix,
   unit,
 }) => {
-  console.log(options || MOCK_CATEGORY_DATA)
   return (
     <>
       <div className="px-3">
@@ -68,6 +67,7 @@ const Filter: React.FC<AdvancedFiltersFilterProps> = ({
                       step={step}
                       suffix={suffix}
                       unit={unit}
+                      renderValues
                     />
                   )}
                 </div>

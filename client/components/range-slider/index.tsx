@@ -1,10 +1,16 @@
+import classNames from 'classnames'
 import Slider, { SliderProps } from 'rc-slider'
 import { useState } from 'react'
 import style from './style.module.scss'
 
 const RangeSlider: React.FC<
-  SliderProps & { name?: string; unit?: '$' | string; suffix?: string }
-> = ({ name, unit, suffix, ...props }) => {
+  SliderProps & {
+    name?: string
+    unit?: '$' | string
+    suffix?: string
+    renderValues?: boolean
+  }
+> = ({ name, unit, suffix, renderValues, ...props }) => {
   const [values, setValues] = useState(props.value || props.defaultValue)
   const isArrayValue = typeof values === 'object'
 
@@ -23,8 +29,16 @@ const RangeSlider: React.FC<
   )
   return (
     <div>
-      <div className="fw-bold small text-dark opacity-75">{renderedValues}</div>
-      <div className={style.rangeSlider}>
+      {renderValues && (
+        <div className="fw-bold small text-dark opacity-75">
+          {renderedValues}
+        </div>
+      )}
+      <div
+        className={classNames(style.rangeSlider, {
+          [style.withIndicator]: renderValues,
+        })}
+      >
         <Slider
           allowCross={false}
           range={isArrayValue}

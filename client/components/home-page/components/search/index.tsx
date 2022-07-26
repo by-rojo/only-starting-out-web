@@ -8,7 +8,7 @@ const Search: React.FC = () => {
     const params = {
       search: fdata.get('search'),
     }
-    console.log('search')
+
     //todo do search
   }
   return (

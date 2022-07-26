@@ -11,7 +11,6 @@ const wp = new wpapi({
 })
 
 export const getBlogs = (params: WPParams): Promise<WPBlogs> => {
-  console.log(params.category)
   return wp
     .posts()
     .category(params.category || '')
