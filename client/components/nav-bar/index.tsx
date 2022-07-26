@@ -35,7 +35,7 @@ const NavBar: React.FC<{ forceInView?: boolean }> = ({
 
   useEffect(() => {
     if (!inView || forceInView) {
-      setNavClass('navbar-light bg-white')
+      setNavClass('navbar-light bg-white shadow-sm')
     } else {
       setNavClass('navbar-dark')
     }

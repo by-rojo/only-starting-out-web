@@ -18,7 +18,7 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-    additionalData: '@import "variables";',
+    additionalData: '@import "module-utils";',
   },
 }
 

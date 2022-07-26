@@ -9,7 +9,7 @@ const AdvancedFilters: React.FC = () => {
     <div
       className={classNames(
         styles.advancedFilters,
-        'd-flex justify-content-end align-items-end pe-4'
+        'd-flex justify-content-end align-items-end pe-4 h-100'
       )}
     >
       <div className="col-11 col-lg-8 mb-3">
