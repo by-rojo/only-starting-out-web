@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <a>
           <div className="border-1 border-top-0 border-start-0 border-end-0 border-black border p-3 p-sm-5">
             <h3 className="h5">{name}</h3>
-            <div className="text-dark">
+            <div className="text-dark mt-2">
               <span>
                 <strong>Hourly:</strong> $45.00-$90.00
               </span>
@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <strong>Posted: </strong> 2 hours ago
               </span>
             </div>
-            <div className="text-muted">
+            <div className="text-muted mt-1">
               <span>
                 <strong>
                   <span className="text-success">✓</span> Payment verified
