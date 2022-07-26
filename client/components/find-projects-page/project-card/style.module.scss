@@ -1,0 +1,14 @@
+
+.card {
+  a {
+    text-decoration: none;
+    color: $dark;
+    background-color: $white;
+    display: block;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    &:hover,&:focus {
+       color: $success;
+       background-color: $gray-100;
+      }
+  }
+}
