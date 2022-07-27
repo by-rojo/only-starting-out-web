@@ -1,5 +1,6 @@
 import ProjectCard from '../project-card'
 import ProjectFilters from '../project-filters'
+import ProjectListFooter from '../project-list-footer'
 import { PROJECT_DATA } from './constants'
 
 const ProjectList: React.FC = () => {
@@ -9,6 +10,7 @@ const ProjectList: React.FC = () => {
       {PROJECT_DATA.map((project) => {
         return <ProjectCard key={project.id} name={project.name} />
       })}
+      <ProjectListFooter />
     </div>
   )
 }
