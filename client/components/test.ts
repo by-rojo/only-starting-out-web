@@ -4,4 +4,4 @@ describe('Test', () => {
   })
 })
 
-export default {}
+export default global
