@@ -8,7 +8,13 @@ const ProjectList: React.FC = () => {
     <div className="position-relative">
       <ProjectFilters />
       {PROJECT_DATA.map((project) => {
-        return <ProjectCard key={project.id} name={project.name} />
+        return (
+          <ProjectCard
+            key={project.id}
+            name={project.name}
+            projectId={project.id}
+          />
+        )
       })}
       <ProjectListFooter />
     </div>
