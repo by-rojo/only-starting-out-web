@@ -68,10 +68,17 @@ const ProjectModal: React.FC<PropsWithChildren<{}>> = ({ children }) => {
         </CardBody>
         <hr />
         <CardBody>
-          <textarea rows={3}></textarea>
+          <div>
+            <label htmlFor="proposal">Create a proposal</label>
+            <textarea className="form-control mt-2" id="proposal" rows={3} />
+          </div>
         </CardBody>
         <CardFooter>
-          <button className="btn btn-primary">Send a Proposal</button>
+          <button className="btn btn-primary">Send Proposal</button>
+          <button className="btn btn-success ms-2 text-white">Save</button>
+          <button className="btn btn-danger ms-2" onClick={onCloseModal}>
+            Close
+          </button>
         </CardFooter>
       </BlowUpModal>
       <div>{children}</div>
