@@ -88,7 +88,7 @@ export const RESOURCE_LINKS = [
     text: 'Templates',
   },
   {
-    href: '/Books',
+    href: '/shop/book',
     text: 'Recommended Books',
   },
 ]
