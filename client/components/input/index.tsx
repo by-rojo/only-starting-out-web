@@ -6,8 +6,8 @@ const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
 }) => {
   return (
     <input
-      {...props}
       placeholder="Search for ventures"
+      {...props}
       className={classNames(className, 'form-control form-control-lg')}
     ></input>
   )

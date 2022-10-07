@@ -1,5 +1,5 @@
 interface HeroProps {
-  image?: WPImage
+  image?: WPImage & { objectPosition: string }
 }
 
 type HeroPropsWithChildren = PropsWithChildren<HeroProps>

@@ -25,6 +25,7 @@ const Hero: React.FC<HeroPropsWithChildren> = ({
             src={image?.src ?? DEFAULT_BLUR_URL}
             layout="fill"
             objectFit="cover"
+            objectPosition={image?.objectPosition}
             quality={100}
             placeholder="blur"
             blurDataURL={DEFAULT_BLUR_URL}
