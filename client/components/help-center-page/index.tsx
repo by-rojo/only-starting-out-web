@@ -1,11 +1,11 @@
 import React from 'react'
-import category from '../../api-factory/wp/category'
 import Breadcrumbs from '../breadcrumbs'
 import Breadcrumb from '../breadcrumbs/breadcrumb'
 import Hero from '../hero'
 import HeroHeadline from '../hero/headline'
 import HeroLayout from '../hero/layout'
-import HeroSubHeadline from '../hero/subHeadline'
+import Input from '../input'
+import Tabs from './tabs'
 
 const HelpCenterPage: React.FC = () => {
   return (
@@ -20,9 +20,7 @@ const HelpCenterPage: React.FC = () => {
         <HeroLayout>
           <br />
           <HeroHeadline>Help Center</HeroHeadline>
-          <HeroSubHeadline>
-            Find answers to all of your questions.
-          </HeroSubHeadline>
+          <Input placeholder="Search" />
           <br />
         </HeroLayout>
       </Hero>
@@ -31,10 +29,9 @@ const HelpCenterPage: React.FC = () => {
           <Breadcrumb text="Home" href="/" />
           <Breadcrumb text="Help Center" active href="/help-center" />
         </Breadcrumbs>
-        <h1 className="mb-5 fw-bold mt-3">
-          F.A.Q.
-          <hr />
-        </h1>
+      </div>
+      <div className="container">
+        <Tabs />
       </div>
     </div>
   )
