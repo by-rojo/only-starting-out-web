@@ -57,15 +57,15 @@ export const PLATFORM_LINKS = [
     text: 'Browse Projects',
   },
   {
-    href: '/book-meeting',
+    href: '/help-center/book-meeting',
     text: 'Book Meeting',
   },
   {
-    href: '/talent',
+    href: '/help-center/become-the-talent',
     text: 'Become the talent',
   },
   {
-    href: '/projects/apply',
+    href: '/help-center/list-a-venture',
     text: 'List a venture',
   },
 ]

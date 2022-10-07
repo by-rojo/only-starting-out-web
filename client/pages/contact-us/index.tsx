@@ -7,7 +7,7 @@ import ContactUsPage from '../../components/contact-us-page'
 import { StaticPageContext } from '../../context/static-page-context'
 import AppHead from '../../components/app-head'
 
-const FindTalent: NextPage<BlogsPageStaticData> = ({ menu }) => {
+const ContactUs: NextPage<BlogsPageStaticData> = ({ menu }) => {
   return (
     <StaticPageContext data={{ menu }}>
       <>
@@ -42,4 +42,4 @@ export async function getServerSideProps({
   }
 }
 
-export default FindTalent
+export default ContactUs
