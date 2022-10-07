@@ -84,7 +84,7 @@ export const RESOURCE_LINKS = [
     text: 'Read our blog',
   },
   {
-    href: '/templates',
+    href: '/help-center/templates',
     text: 'Templates',
   },
   {
