@@ -5,9 +5,9 @@ const Article: React.FC = () => {
     <>
       <div className="container my-5 fs-5" style={{ maxWidth: 800 }}>
         <p className="py-5">
-          <strong>At MentorCruise we ask:</strong> How can we make access to
-          mentoring easier, fairer and more effective? These questions guide as
-          we build out the MentorCruise network and platform.
+          <strong>At Only Starting Out we ask:</strong> How can we make access
+          to mentoring easier, fairer and more effective? These questions guide
+          as we build out the MentorCruise network and platform.
         </p>
         <p className="pb-5">
           <strong>
