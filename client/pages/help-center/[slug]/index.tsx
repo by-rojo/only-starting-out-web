@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
-import wpMenues from '../../api-factory/wp/menus'
-import Footer from '../../components/footer'
+import wpMenues from '../../../api-factory/wp/menus'
+import Footer from '../../../components/footer'
 import { dehydrate, QueryClient } from 'react-query'
-import NavBar from '../../components/nav-bar'
-import HelpCenterPage from '../../components/help-center-page'
-import { StaticPageContext } from '../../context/static-page-context'
-import AppHead from '../../components/app-head'
+import NavBar from '../../../components/nav-bar'
+import HelpCenterDetailsPage from '../../../components/help-center-details-page'
+import { StaticPageContext } from '../../../context/static-page-context'
+import AppHead from '../../../components/app-head'
 
-const HelpCenter: NextPage<BlogsPageStaticData> = ({ menu }) => {
+const HelpCenterDetails: NextPage<BlogsPageStaticData> = ({ menu }) => {
   return (
     <StaticPageContext data={{ menu }}>
       <>
@@ -16,7 +16,7 @@ const HelpCenter: NextPage<BlogsPageStaticData> = ({ menu }) => {
           description={process.env.NEXT_PUBLIC_BLOG_PAGE_DESCRIPTION}
         />
         <NavBar />
-        <HelpCenterPage />
+        <HelpCenterDetailsPage />
         <Footer />
       </>
     </StaticPageContext>
@@ -42,4 +42,4 @@ export async function getServerSideProps({
   }
 }
 
-export default HelpCenter
+export default HelpCenterDetails
