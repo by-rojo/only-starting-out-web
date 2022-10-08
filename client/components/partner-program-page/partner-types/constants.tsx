@@ -9,7 +9,7 @@ const PARTNER_TYPES = [
     type: 'Community Leader',
     src: '/leader.jpg',
     description:
-      'You lookin for ways to create more value for your professional community. Working with us means your community can be mentored by their own.',
+      'You look for ways to create more value for your professional community. Working with us means your community can be mentored by their own.',
   },
   {
     type: 'Pro Marketer',
