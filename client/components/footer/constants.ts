@@ -103,7 +103,7 @@ export const COMPANY_LINKS = [
     text: 'Partner Program',
   },
   {
-    href: '/write-for-us',
+    href: '/partner-program/#write',
     text: 'Write for us',
   },
   {
