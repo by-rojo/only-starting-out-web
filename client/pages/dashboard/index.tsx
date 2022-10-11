@@ -7,15 +7,15 @@ import DashboardPage from '../../components/dashboard-page'
 import { StaticPageContext } from '../../context/static-page-context'
 import AppHead from '../../components/app-head'
 
-const BlogPage: NextPage<BlogsPageStaticData> = ({ menu }) => {
+const Dashboard: NextPage<BlogsPageStaticData> = ({ menu }) => {
   return (
     <StaticPageContext data={{ menu }}>
       <>
         <AppHead
-          title={`Articles – ${process.env.NEXT_PUBLIC_SITE_NAME}`}
+          title={`Dashboard – ${process.env.NEXT_PUBLIC_SITE_NAME}`}
           description={process.env.NEXT_PUBLIC_BLOG_PAGE_DESCRIPTION}
         />
-        <NavBar />
+        <NavBar forceInView />
         <DashboardPage />
         <Footer />
       </>
@@ -32,7 +32,7 @@ export async function getServerSideProps({
   query: { page: string }
 }) {
   const queryClient = new QueryClient()
-  const menu = await wpMenues()
+  const menu = await wpMenues('talent-business-menu')
 
   return {
     props: {
@@ -42,4 +42,4 @@ export async function getServerSideProps({
   }
 }
 
-export default BlogPage
+export default Dashboard

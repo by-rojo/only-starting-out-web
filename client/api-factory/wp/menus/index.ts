@@ -9,19 +9,12 @@ const wp = new wpapi({
 
 wp.menu = wp.registerRoute('menus/v1', '/menus/(?P<slug>)')
 
-const getMainMenu = (): Promise<MenuData & Error> => {
+const getMainMenu = (menuSlug = 'main-menu'): Promise<MenuData & Error> => {
   return wp
     .menu()
-    .then((data: MenusItem[]) => {
-      return wp
-        .menu()
-        .setPathPart(1, data?.[0]?.slug)
-        .then((data: MenusItem) => {
-          return data.items
-        })
-        .catch((e: Error) => {
-          return e
-        })
+    .setPathPart(1, menuSlug)
+    .then((data: MenusItem) => {
+      return data.items
     })
     .catch((e: Error) => {
       console.error(e)
